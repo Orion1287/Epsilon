@@ -1,0 +1,4 @@
+Zen
+Tmux
+feh
+fzf
