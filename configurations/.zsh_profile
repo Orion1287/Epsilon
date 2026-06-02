@@ -1,0 +1,21 @@
+
+#BIFISDFIOJFO
+export XDG_CONFIG_HOME=$HOME/.config
+VIM="nvim"
+
+
+
+## All that sweet sweet fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+
+addToPathFront() {
+    if [[ ! -z "$2" ]] || [[ "$PATH" != *"$1"* ]]; then
+        export PATH=$1:$PATH
+    fi
+}
+
+addToPathFront $HOME/.local/scripts
+# Where should I put you?
+bindkey -s ^f "tmux-sessionizer\n"
+
